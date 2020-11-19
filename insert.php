@@ -1,4 +1,4 @@
-?php
+<?php
 	$conn = mysqli_init();
 	mysqli_real_connect($conn, 'parattakorn.mysql.database.azure.com', 'it63070101@parattakorn', 'UNDdws73', 'itflab', 3306);
 	if(mysqli_connect_errno($conn)) {

@@ -1,7 +1,11 @@
+<?php
+	$conn = mysqli_connect('parattakorn.mysql.database.azure.com', 'it63070101@parattakorn', 'UNDdws73', 'itflab');
+	$sql = 'DELETE FROM guestbook WHERE ID = '.$_GET['ID'].'';
+?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Delete | 13th ITF LAB</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 	<style type="text/css">
@@ -18,16 +22,15 @@
 					<div class="card-body">
 						<h2 align="center">
 						<?php
-							$conn = mysqli_connect('parattakorn.mysql.database.azure.com', 'it63070101@parattakorn', 'UNDdws73', 'itflab');
-							if (mysqli_query($conn, 'DELETE FROM guestbook WHERE ID = '.$_GET['ID'].'')) {
-								echo 'DELETE COMPLETED';
+							if(mysqli_query($conn, $sql)) {
+								echo "DELETE COMPLETED";
 							}
 							else {
-								echo 'ERROR!';
+								echo "FAILED TO DELETE";
 							}
 						?>
 						</h2>
-						<p align="center"><a href="show.php" class="btn btn-sm btn-dark">BACK</a></p>
+						<p align="center" class="mt-4 mb-0"><a href="index.php" class="btn btn-sm btn-warning">BACK</a></p>
 					</div>
 				</div>
 			</div>
