@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <style type="text/css">
     body {
-      background-color: rgba(0, 0, 0, 0.125);
+      background-color: rgba(33, 221, 127, 0.863);
     }
   </style>
 </head>
